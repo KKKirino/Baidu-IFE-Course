@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;/*将默认的内外边距清除*/
+        }
+        .page{
+            width: 100%;
+            height: 1024px;
+            background: url("img/back3.png") center top no-repeat;/*背景图*/
+        }
+        .list1{
+            width: 150px;
+            height: 204px;
+            position: fixed;/*固定视图位置，保持不变*/
+            left: 0;/*左对齐*/
+            top: 50%;/*居中处理*/
+            margin-top: -102px;/*居中处理*/
+            font-family: '微软雅黑';
+        }
+        .list2{
+            width: 150px;
+            height: auto;
+            border: 1px solid white;
+            background: black;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-size: 16px;
+        }
+        .list2 ul{
+            width: 150px;
+            height: auto;
+            display: none;/*将二级目录默认关闭*/
+        }
+        .list2:hover ul{
+            display: block;/*当鼠标放到导航标题时显示二级目录*/
+        }
+        .list2 ul li{
+            width: 150px;
+            height: auto;
+            border-bottom: 1px dashed gray;
+            background: white;
+            text-align: center;
+            line-height: 40px;
+            color: #000;
+            position: relative;/*将列表位置设置继承*/
+            cursor: pointer;/*改变指针形状为可点击状态*/
+        }
+        .tit{
+            width: 150px;
+            height: 40px;
+        }
+        .list3{
+            width: 150px;
+            height: auto;
+            position: absolute;/*三级标题位置设置为对照二级标题的绝对位置*/
+            left: 150px;
+            top: 0;
+            display: none;/*默认关闭三级标题*/
+        }
+        .list2 ul li:hover .list3{
+            display: block;/*开启三级标题*/
+        }
+        .child{
+            width: 150px;
+            height: 40px;
+            border-bottom: 1px dashed gray;
+            background: darkgrey;
+            text-align: center;
+            line-height: 40px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="page">
+        <h1>简单侧边栏</h1>
+        <div class="list1">
+            <div class="list2">
+                <div class="tit">导航标题</div>
+                    <ul>
+                        <li>
+                            二级标题
+                            <div class="list3">
+                                <div class="child">三级目录</div>
+                                <div class="child">三级目录</div>
+                                <div class="child">三级目录</div>
+                            </div>
+                        </li>
+                        <li>二级标题
+                            <div class="list3">
+                                <div class="child">三级目录</div>
+                                <div class="child">三级目录</div>
+                                <div class="child">三级目录</div>
+                            </div>
+                        </li>
+                        <li>二级标题
+                            <div class="list3">
+                                <div class="child">三级目录</div>
+                                <div class="child">三级目录</div>
+                                <div class="child">三级目录</div>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="list2">
+                <div class="tit">导航标题</div>
+                <ul>
+                    <li>二级标题</li>
+                    <li>二级标题</li>
+                    <li>二级标题</li>
+                </ul>
+            </div>
+            <div class="list2">
+                <div class="tit">导航标题</div>
+                <ul>
+                    <li>二级标题</li>
+                    <li>二级标题</li>
+                    <li>二级标题</li>
+                </ul>
+            </div>
+            <div class="list2">
+                <div class="tit">导航标题</div>
+                <ul>
+                    <li>二级标题</li>
+                    <li>二级标题</li>
+                    <li>二级标题</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
