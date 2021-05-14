@@ -1,0 +1,24 @@
+body {
+    width: 90%;
+    /* max-width: 900px; */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  h1 {
+      margin-left: 100px;
+  }
+
+  .left {
+    width: 500px;
+	height: 100%;
+	background-color: beige;
+	float: left;
+    /*position: absolute;
+	left: 0;*/
+  }
+  
+  .right {
+    height: 100%;
+	background-color: bisque;	
+	
+}

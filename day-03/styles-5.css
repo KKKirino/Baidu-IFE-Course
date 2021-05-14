@@ -1,0 +1,38 @@
+body,html {
+    width: 90%;
+    height: 100%;
+    /* max-width: 900px; */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  h1 {
+      margin-left: 100px;
+  }
+  .left,.middle {
+      position: absolute;
+      height: 100%;
+      top: 10%;
+      width: 300px;
+  }
+  .left {
+    left: 5%;
+	background-color: beige;
+    /*position: absolute;
+	left: 0;*/
+  }
+  .right {
+    height: 100%;
+	background-color: bisque;	
+    float: right;
+    margin-left: 620px;	
+}
+  .middle {
+    left:5%;
+    margin-left: 320px;
+    background-color: #666
+
+  }
+
+
+ 
+  

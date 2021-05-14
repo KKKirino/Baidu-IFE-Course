@@ -1,0 +1,34 @@
+body {
+    width: 90%;
+    /* max-width: 900px; */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  h1 {
+      margin-left: 100px;
+  }
+  .left {
+	height: 100%;
+    width: 300px;
+    float: left;
+	background-color: beige;
+    /*position: absolute;
+	left: 0;*/
+  }
+  .right {
+    height: 100%;
+    width: 300px;
+    float: right;
+	background-color: bisque;	
+	
+}
+
+  .middle {
+      margin-right: 320px;
+      margin-left: 320px;
+      height: 100%;
+
+  }
+
+ 
+  
