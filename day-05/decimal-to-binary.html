@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+
+<body>
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <p id="message"></p>
+    <p id="demo"></p>
+    <script>
+        function dec2bin(decNumber) {
+            // var res = "";
+            // while (decNumber > 0) {
+            //     var yu = decNumber % 2;
+            //     decNumber /= 2;
+            //     res = yu + res;
+            // }
+            var res = decNumber.toString(2);
+            document.getElementById("result").innerHTML = res;
+            return res;
+        }
+        document.getElementById("trans-btn").onclick = function () {
+            var dec = Number(document.getElementById("dec-number").value);
+            var n = Number(document.getElementById("bin-bit").value);
+            var res = dec2bin(dec);
+            var l = res.length;
+            try {
+                if (l > n) throw "该十进制数字转化后的二进制长度无法用给定长度表示！";
+            }
+            catch (err) {
+                message.innerHTML = err;
+            }
+            var greeting;
+            var time = new Date().getHours();
+            if (0 < time < 8) {
+                greeting = "早点睡吧~";
+            } 
+            else if (8 <= time < 12) {
+                greeting = "早上好，今天又是新的一天~";
+            } 
+            else if (12< time < 19) {
+                greeting = "下午好~";
+            } 
+            else {
+                greeting = "晚安~";
+            }
+            document.getElementById("demo").innerHTML = greeting;
+        
+        }
+
+// 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+// 新的需求是，转化显示后的二进制数为bin-bit中输入的数字宽度，例如
+// dec-number为5，bin-bit为5，则转化后数字为00101
+// 如果bin-bit小于转化后的二进制本身位数，则使用原本的位数，如dec-number为5，bin-bit为2，依然输出101，但同时在console中报个错
+// Some coding
+
+    </script>
+</body>
+
+</html>
