@@ -1,0 +1,14 @@
+<div id="liujincai">
+</div>
+<input type="button" name="start" value="start" onclick='startShow();'>
+<input type="button" name="stop" value="stop" onclick="stop();">
+<script language="javascript">  
+var intvalue=1;  
+var timer2=null;  
+function startShow()  {   
+ liujincai.innerHTML=liujincai.innerHTML + " " + (intvalue ++).toString();   
+timer2=window.setTimeout("startShow()",2000);  }  
+function stop()  {   
+ window.clearTimeout(timer2);  
+ }
+</script>

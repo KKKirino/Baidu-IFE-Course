@@ -1,0 +1,32 @@
+<!-- 在HTML中增加上面的代码，然后通过JavaScript编写如下功能：
+
+当点击按钮 submit-btn 时，在console中输出 name 中的内容
+在输入过程中，如果按回车键，则同样执行上一条的需求
+在输入过程中，如果按 ESC 键，则把输入框中的内容清空 -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!--  keyCode 事件属性 -->
+    <input id="name" type="text" onkeydown="keyDown()">
+    <button id="submit-btn" onclick="jsEvent()">Submit</button>
+
+    <script> 
+        function keyDown() {
+            switch(event.key) {
+                case "Enter":
+                    jsEven();
+                    break;
+                case "Escape":
+                    document.getElementById("name").value="";
+                    break; 
+            }
+        }
+        function jsEvent() {
+            console.log(document.getElementById("name").value);
+        }
+    </script>
+</body>
+
+</html>

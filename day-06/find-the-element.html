@@ -36,6 +36,8 @@
         </div>
         <p id="demo-1"></p>
         <p id="demo-2"></p>
+        <p id="demo-3"></p>
+        <p id="demo-4"></p>
     </div>
     <script>
 
@@ -54,24 +56,40 @@
             var x = document.getElementById(sectionId); // 这里sectionId不要加 “” ！！
             var y = x.getElementsByTagName("span");
             var text2 = "";
-            for (i = 0; i < y.length; i ++) {
-                if(y[i].innerHTML == "HTML") text2 += y[i].innerHTML + "<br>";
+            for (i = 0; i < y.length; i++) {
+                if (y[i].innerHTML == "HTML") text2 += y[i].innerHTML + "<br>";
             }
             return text2;
         }
 
         function findListItem(sectionId, spanCont) {
             // 返回某个section下，所有所包含span内容为spanCont的LI标签
+            var x = document.getElementById(sectionId).getElementsByTagName("li");
+            var text3 = "";
+            for (i = 0; i < x.length; i++) {
+                if (x[i].getElementsByTagName("span")[0].innerHTML == spanCont) text3 += x[i].innerHTML + "<br>";
+            }
+            return text3;
         }
 
         function getActiveLinkContent(sectionId) {
             // 返回某个section下，class为active的链接中包含的文字内容
+            var x = document.getElementById(sectionId).getElementsByClassName("active");
+            var text4 = "";
+            for (var i = 0; i < x.length; i++) {
+                    text4 += x[i].innerHTML;
+            }
+            return text4;
         }
-        
+
         document.getElementById("demo-1").innerHTML =
             '返回页面中所有li标签：' + "<br>" + getAllListItem();
         document.getElementById("demo-2").innerHTML =
             '返回某个section下所有span中内容为HTML的span标签：' + "<br>" + findAllHtmlSpanInOneSection("news-normal");
+        document.getElementById("demo-3").innerHTML =
+            '返回某个section下，所有所包含span内容为spanCont的LI标签：' + "<br>" + findListItem("news-top", "JS");
+        document.getElementById("demo-4").innerHTML =
+            '返回某个section下，class为active的链接中包含的文字内容：' + "<br>" + getActiveLinkContent("news-normal");
 
     </script>
 </body>
